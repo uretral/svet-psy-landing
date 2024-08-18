@@ -1,0 +1,52 @@
+@import "smart-grid";
+
+.sponsorship {
+  padding-top: 150px;
+  padding-bottom: 140px;
+  background: @color-light;
+
+  &_body {
+    .col();
+    .size(10);
+    margin: 0 auto;
+    text-align: center;
+
+    h2 {
+      .bold;
+      font-size: 40px;
+      line-height: 125%;
+      text-transform: uppercase;
+      color: @color-accent;
+      margin-top: 34px;
+      margin-bottom: 38px;
+    }
+
+    p {
+      font-size: 28px;
+      line-height: 142%;
+    }
+    
+    span {
+      font-size: 28px;
+      line-height: 142%;
+      padding: 0 50px;
+      text-align: center;
+      display: block;
+    }
+  }
+
+  &_footer {
+    .col();
+    .size(12);
+    margin-top: 77px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &_aside {
+    .col();
+    .size(12);
+  }
+
+
+}

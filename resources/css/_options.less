@@ -1,0 +1,232 @@
+@import "smart-grid";
+
+.options {
+  padding-top: 128px;
+  padding-bottom: 68px;
+  background-color: @color-light;
+
+  &_header {
+    .col();
+    .size(12);
+    margin-bottom: 52px;
+
+    h2 {
+      .bolder;
+      font-size: 40px;
+      text-transform: uppercase;
+    }
+  }
+
+  &_item {
+    .col();
+    .size(4);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    margin-bottom: 114px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: @color-bg;
+
+    &_title {
+      height: 100%;
+      padding: 26px 37px 22px 37px;
+      position: absolute;
+      box-sizing: border-box;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    &_header {
+      height: 130px;
+      position: relative;
+      color: @color-light;
+      z-index: 1;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url("../img/greek-bg.svg");
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
+
+      &.bg {
+        color: @color-text;
+
+        &:after {
+          background-color: @color-substrate;
+        }
+      }
+
+      &.accent {
+
+        &:after {
+          background-color: @color-accent;
+        }
+
+      }
+
+      &.dark {
+        &:after {
+          background-color: @color-text;
+        }
+      }
+
+      &.border {
+        &:after {
+          background-color: @color-border;
+        }
+      }
+
+      h3 {
+        font-size: 20px;
+        .bold;
+        text-transform: uppercase;
+        word-spacing: 999em;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      span {
+        font-size: 16px;
+        margin-top: auto;
+
+        b {
+          .bold;
+        }
+      }
+    }
+
+
+    ul {
+      height: 170px;
+      padding: 25px 37px 0 37px;
+
+      li {
+        display: block;
+        position: relative;
+        padding-left: 15px;
+        font-size: 14px;
+        line-height: 142%;
+        margin-bottom: 21px;
+
+        &:before {
+          content: '\2022';
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+
+    label {
+      display: block;
+      position: relative;
+      //width: 100%;
+      margin: 0 37px 25px 37px;
+
+      button {
+        position: absolute;
+        top: -7px;
+        right: 0;
+        color: @color-border;
+      }
+
+      input[type="text"] {
+        width: 100%;
+      }
+    }
+
+    &_price {
+      display: inline-flex;
+      flex-direction: column;
+
+      span {
+        text-align: center;
+        text-decoration: line-through;
+        color: @color-border;
+        font-size: 24px;
+      }
+
+      b {
+        text-align: center;
+        font-size: 24px;
+        .bold;
+      }
+
+      &.lined {
+        border-bottom: 1px solid @color-border;
+        padding-bottom: 33px;
+        margin: 35px auto 30px;
+      }
+
+      &.last {
+        margin-top: auto;
+        text-align: center;
+        padding-left: 37px;
+        padding-right: 37px;
+        padding-bottom: 30px;
+
+        p {
+          font-size: 12px;
+          margin-bottom: 9px;
+        }
+      }
+
+
+      //&.last {
+      //  margin-top: auto!important;
+      //}
+
+    }
+
+    &_btn {
+      height: 90px;
+      padding: 32px;
+      background-color: @color-text;
+
+      button {
+        font-size: 20px;
+        .bold;
+        color: @color-light;
+        background: transparent;
+
+        &:hover {
+          color: @color-accent;
+        }
+      }
+    }
+
+    &_footer {
+      margin-top: auto;
+      text-align: center;
+    }
+
+
+  }
+
+
+}

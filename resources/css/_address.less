@@ -1,0 +1,84 @@
+@import "smart-grid";
+
+.address {
+  //background: url("../img/greek.svg") repeat-x center bottom;
+  margin-top: 124px;
+
+  &_body {
+    .col();
+    .size(4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+      .bold;
+      font-size: 40px;
+      text-transform: uppercase;
+    }
+    address {
+      b {
+        display: block;
+      }
+      p {
+        span {
+          display: block;
+        }
+        font-size: 20px;
+        line-height: 110%;
+        padding-bottom: 35px;
+      }
+    }
+
+    > span {
+      display: block;
+      line-height: 125%;
+      padding-bottom: 20px;
+
+    }
+
+  }
+
+  &_slider {
+    .col();
+    .size(8);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_slide {
+    width: 100%;
+    margin-bottom: 20px;
+    aspect-ratio: 721 / 297;
+    overflow: hidden;
+    img {
+      object-position: center;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+
+  &_slides {
+    display: flex;
+    justify-content: space-between;
+
+    //width: calc();
+    gap: 8px;
+    picture {
+      display: block;
+      aspect-ratio: 10 / 5;
+      overflow: hidden;
+      flex: 1 1 0;
+      img {
+        object-position: center;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,34 @@
+@import "smart-grid";
+
+.header {
+  height: 100px;
+  .row-flex;
+  justify-content: space-between;
+  padding-top: 10px;
+
+  &-logo {
+    .col();
+    .size(4);
+    display: block;
+    width: 166px;
+    height:78px;
+    margin-top: 10px;
+
+    img {
+      object-fit: cover;
+    }
+
+  }
+  &-menu {
+    .col();
+    .size(8);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    a {
+      color: @color-text;
+      display: inline-block;
+      margin-left: 36px;
+    }
+  }
+}

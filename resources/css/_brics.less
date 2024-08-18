@@ -1,0 +1,32 @@
+@import "smart-grid";
+
+.brics {
+  background: url("../img/greek-3.svg") no-repeat right top @color-accent;
+  padding-top: 110px;
+  padding-bottom: 110px;
+
+  &_body {
+    .col();
+    .size(7);
+
+    p {
+      font-size: 28px;
+      line-height: 145%;
+      color: @color-light;
+      padding-right: 40px;
+    }
+  }
+
+  &_aside {
+    .col();
+    .size(5);
+    display: flex;
+    justify-content: end;
+
+    img {
+      align-self: center;
+      height: 100%;
+      width: auto;
+    }
+  }
+}

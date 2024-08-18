@@ -1,0 +1,69 @@
+@import "smart-grid";
+
+.purchase {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &_title {
+    .col();
+    .size(12);
+    margin-bottom: 27px;
+    background: url("../img/logo.png") no-repeat right center;
+    background-size: auto 78px;
+
+    h2 {
+      .bold;
+      font-size: 40px;
+      text-transform: uppercase;
+    }
+  }
+
+  &_item {
+    .col();
+    .size(7);
+    height: 450px;
+    display: flex;
+    border: 1px solid @color-text;
+    border-radius: 50px;
+    padding: 46px;
+    align-items: flex-end;
+    background: url("../img/video-btn.svg") no-repeat center 57px;
+    &:last-of-type {
+      .col();
+      .size(5);
+      color: @color-light;
+      background-color: @color-dark;
+    }
+
+    &_text {
+      text-align: center;
+      width: 100%;
+      b {
+        display: block;
+      }
+      p {
+        font-size: 24px;
+        line-height: 120%;
+      }
+    }
+
+    button {
+      margin-top: 34px;
+      width: 353px;
+    }
+
+    ul {
+      text-align: center;
+      li {
+        padding-left: 20px;
+        position: relative;
+        font-size: 20px;
+        line-height: 110%;
+        &:before {
+          content: '\2022';
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}

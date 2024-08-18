@@ -1,0 +1,65 @@
+@import "smart-grid";
+
+.keyTopics {
+  background: url("../img/greek.svg") repeat-x center bottom;
+  padding-top: 108px;
+  padding-bottom: 167px;
+  &_header {
+    .col();
+    .size(12);
+    h2 {
+      .bold;
+      font-size: 40px;
+      text-transform: uppercase;
+      line-height: 110%;
+      span {
+        display: block;
+        color: @color-accent;
+      }
+    }
+  }
+
+  &_body {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 49px;
+
+    &_content {
+      .col();
+      .size(6);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      ul {
+
+        li {
+          display: block;
+          padding-left: 30px;
+          position: relative;
+          font-size: 20px;
+          line-height: 150%;
+          margin-bottom: 29px;
+          &:before {
+            content: '\2022';
+            position: absolute;
+            left: 12px;
+          }
+        }
+      }
+      .btn {
+        white-space: nowrap;
+        align-self: flex-start;
+        margin-top: 16px;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+}

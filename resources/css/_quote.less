@@ -1,0 +1,27 @@
+@import "smart-grid";
+
+.quote {
+  color: @color-light;
+  background: url("../img/greek-2.svg") no-repeat right 0 @color-accent;
+  margin-top: 115px;
+  &_body {
+    .col();
+    .size(7);
+    padding-top: 100px;
+    padding-bottom: 118px;
+    &.thin {
+      .size(6);
+    }
+  }
+  &_body {
+    p {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+
+  &_aside {
+    .col();
+    .size(5);
+  }
+}

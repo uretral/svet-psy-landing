@@ -1,0 +1,49 @@
+@import "smart-grid";
+
+.tasks {
+  background: url("../img/greek.svg") repeat-x center bottom;
+  padding-bottom: 200px;
+
+  &_list, &_body {
+    .col();
+    .size(12);
+  }
+
+  &_body {
+    padding-top: 113px;
+
+    h2 {
+      .bold;
+      font-size: 40px;
+      text-transform: uppercase;
+
+      span {
+        display: block;
+        color: @color-accent;
+      }
+    }
+
+    p {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+
+  &_list {
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+    margin-top: 68px;
+    margin-bottom: 48px;
+    line-height: 25px;
+
+    h3 {
+      color: @color-accent;
+      .bold;
+    }
+
+
+  }
+
+
+}
