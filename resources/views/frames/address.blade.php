@@ -23,20 +23,17 @@
     <div class="address_slider">
 
         <div class="address_slide">
-            <img src="{{Vite::image('slides/1.jpeg')}}" alt="AZIMUT Сити Отель"/>
+            <img src="{{asset('img/slides/azimut.jpeg')}}" alt="AZIMUT Сити Отель"/>
         </div>
         <div class="address_slides">
             <picture>
-                <img src="{{Vite::image('slides/1.jpeg')}}" alt="AZIMUT Сити Отель"/>
+                <img src="{{asset('img/slides/2.jpeg')}}" alt="AZIMUT Сити Отель"/>
             </picture>
             <picture>
-                <img src="{{Vite::image('slides/2.jpeg')}}" alt="AZIMUT Сити Отель"/>
+                <img src="{{asset('img/slides/3.jpeg')}}" alt="AZIMUT Сити Отель"/>
             </picture>
             <picture>
-                <img src="{{Vite::image('slides/3.jpeg')}}" alt="AZIMUT Сити Отель"/>
-            </picture>
-            <picture>
-                <img src="{{Vite::image('slides/4.jpeg')}}" alt="AZIMUT Сити Отель"/>
+                <img src="{{asset('img/slides/4.jpeg')}}" alt="AZIMUT Сити Отель"/>
             </picture>
         </div>
 

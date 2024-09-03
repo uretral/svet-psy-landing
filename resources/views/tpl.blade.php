@@ -6,15 +6,14 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @vite(['resources/css/app.less','resources/assets/js/app.js'])
+{{--        @vite(['resources/css/app.less','resources/js/app.js'])--}}
+    <link rel="stylesheet" href="/build/assets/app-Ciu2Gu0x.css">
+    <script src="/build/assets/app-CokpbQL5.js"></script>
 
-    {{--    <link rel="apple-touch-icon" sizes="180x180" href="{{ vite::asset('Modules/My/Resources/assets/img/favicon/apple-touch-icon.png')}}">--}}
-    {{--    <link rel="icon" type="image/png" sizes="32x32" href="{{ vite::asset('Modules/My/Resources/assets/img/favicon/favicon-32x32.png')}}">--}}
-    {{--    <link rel="icon" type="image/png" sizes="16x16" href="{{ vite::asset('Modules/My/Resources/assets/img/favicon/favicon-16x16.png')}}">--}}
-    {{--    <link rel="manifest" href="{{ vite::asset('Modules/My/Resources/assets/img/favicon/site.webmanifest')}}">--}}
-    {{--    <link rel="mask-icon" href="{{ vite::asset('Modules/My/Resources/assets/img/favicon/safari-pinned-tab.svg')}}" color="#5bbad5">--}}
 
-    <title>{{ config('app.name') }}: @yield('title')</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+
+    <title>{{ config('app.name') }}: Международный конгресс специалистов, работающих с травмой </title>
 
 </head>
 
@@ -23,13 +22,13 @@
 <x-header class="header">
 
     <a href="javascript:" class="header-logo">
-        <img src="{{ Vite::image('logo.png')  }}" alt="logo"/>
+        <img src="{{ asset('img/logo.png')  }}" alt="logo"/>
 
     </a>
     <div class="header-menu">
-        <a href="javascript:">о конференции</a>
-        <a href="javascript:">варианты участия</a>
-        <a href="javascript:">место проведения</a>
+        <a href="#tasks">О конгрессе</a>
+        <a href="#options">Варианты участия</a>
+        <a href="#address">Место проведения</a>
     </div>
 
 </x-header>
@@ -39,9 +38,9 @@
 <x-footer>
     <div class="footer-menu">
         <h2>КОНТАКТЫ</h2>
-        <a href="javascript:">О конгрессе</a>
-        <a href="javascript:">Варианты участия</a>
-        <a href="javascript:">Место проведения</a>
+        <a href="#tasks">О конгрессе</a>
+        <a href="#options">Варианты участия</a>
+        <a href="#address">Место проведения</a>
     </div>
     <div class="footer-contacts">
         <a class="tel" href="tel:+7 (901) 634-50-60">+7 (901) 634-50-60</a>
@@ -49,18 +48,16 @@
     </div>
     <div class="footer-policy">
         <div class="footer-socials">
-            <a class="tg-tr" href="javascript:"></a>
-            <a class="tg-w" href="javascript:"></a>
-            <a class="vk" href="javascript:"></a>
+            <a class="tg-tr" target="_blank" href="https://t.me/ZhiPT_2024"></a>
+            <a class="tg-w" target="_blank" href="https://wa.me/79016345060"></a>
+            <a class="vk" target="_blank" href="https://vk.com/zhipt"></a>
+            <a class="rutube" target="_blank" href="https://rutube.ru/channel/38741569/"></a>
         </div>
-        <a href="javascript:">Публичная оферта</a>
-        <a href="javascript:">Политика конфиденциальности</a>
+        <a href="https://brendid.getcourse.ru/oferta_kongress">Публичная оферта</a>
+        <a href="https://brendid.getcourse.ru/PD">Политика конфиденциальности</a>
     </div>
 
 </x-footer>
-
-{{--<livewire:my::global-events-listener/>--}}
-{{--@livewireScriptConfig--}}
 
 </body>
 </html>

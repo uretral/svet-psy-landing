@@ -7,7 +7,7 @@
         <p>МОСКВА 13-14 ОКТЯБРЯ <span>2024</span></p>
     </div>
     <div class="banner_buttons">
-        <button class="btn accent">Принять участие</button>
-        <button class="btn light">Программа</button>
+        <a class="btn accent" href="#options">Принять участие</a>
+        <a class="btn light" target="_blank" href="https://docs.google.com/spreadsheets/d/14J3gPPbkm6EKFcUrd8F3q6DjGFhHTCwjBpr27ac-Kok/">Программа</a>
     </div>
 </x-section>

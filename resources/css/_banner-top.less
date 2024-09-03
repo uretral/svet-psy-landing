@@ -1,24 +1,43 @@
 @import "smart-grid";
 
 .banner {
-  background: url("../img/banner-line.png") no-repeat right, url("../img/venue 1.jpg") no-repeat center;
-  background-size: auto 100%, 100% auto;
+  background: url("../img/line-vertical.svg") no-repeat right, url("../img/venue 1.jpg") no-repeat center;
+  background-size: auto 100%, cover;
   color: @color-light;
-
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding-top: 70px;
+  padding-bottom: 60px;
+  .md-block({
+    margin-top: 10px;
+  });
+  .xs-block({
+    padding-top: 30px;
+    padding-bottom: 30px;
+  });
   &_wrapper {
     .row-flex;
     aspect-ratio: 16 / 10.04;
-    padding-top: 70px;
-    padding-bottom: 60px;
+
+    .lg-block({
+      aspect-ratio: 16 / 7.04;
+    });
+
+    .xs-block({
+      flex-direction: column;
+      justify-content: space-between;
+      aspect-ratio: 16 / 8.04;
+    });
+
   }
 
   &_body {
     .col();
     .size(8.5);
+    .size-xs(12);
     display: flex;
     flex-direction: column;
     padding-bottom: 50px;
-
 
     h1 {
       font-size: 48px;
@@ -33,11 +52,51 @@
       font-size: 40px;
       margin-top: auto;
     }
+    
+    .lg-block({
+      h1 {
+        font-size: 40px;
+      }
+      p {
+        font-size: 36px;
+      }
+    });
+
+    .md-block({
+      h1 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 26px;
+      }
+    });
+
+    .sm-block({
+      h1 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 22px;
+      }
+    });
+
+    .xs-block({
+      text-align: center;
+      h1 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 13px;
+      }
+      padding-bottom: 0px;
+    });
+    
   }
 
   &_aside {
     .col();
     .size(3);
+    .size-xs(12);
     margin-left: auto;
 
     p {
@@ -54,17 +113,60 @@
       }
     }
 
+    .lg-block({
+      p {
+        font-size: 28px;
+      }
+    });
+    .md-block({
+
+      p {
+        padding-top: 10px;
+        font-size: 24px;
+      }
+    });
+
+    .sm-block({
+      p {
+        padding-top: 5px;
+        font-size: 20px;
+      }
+    });
+
+    .xs-block({
+      p {
+        word-spacing: unset;
+        text-align: center;
+        font-size: 14px;
+        padding-top: 0px;
+      }
+    });
+
   }
 
   &_buttons {
     width: 100%;
     height: 65px;
     margin-top: auto;
+    
+    .lg-block({
+
+    });
+    .sm-block({
+      height: auto;
+      margin-top: unset;
+      display: flex;
+      justify-content: space-between;
+    });
   }
 
   .btn {
     .col();
     .size(4);
+    .size-sm(6);
+    .lg-block({
+      white-space: nowrap;
+    });
 
   }
 

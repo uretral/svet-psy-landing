@@ -1,10 +1,10 @@
 @columns: 12;
 @atom: (100% / @columns);
 
-@break_lg: 1160px;
-@break_md: 960px;
-@break_sm: 900px;
-@break_xs: 560px;
+@break_lg: 1400px;
+@break_md: 1120px;
+@break_sm: 768px;
+@break_xs: 576px;
 
 @offset: 20px;
 @offset_lg: @offset;
@@ -513,9 +513,9 @@
   font-style: normal;
 }
 
-@import "preset";
 
-section, footer, header, .container, [role="grid"] {
+
+section, footer, header, .modal, [role="grid"] {
   box-sizing: border-box;
   width: 100%;
 
@@ -538,6 +538,15 @@ body {
   color: @color-text;
   position: relative;
   background: @color-bg;
+  .md-block({
+    font-size: 14px;
+  });
+  .sm-block({
+    font-size: 13px;
+  });
+  .xs-block({
+    font-size: 12px;
+  });
 
 /*  &:after {
     content: '';
@@ -571,35 +580,7 @@ body {
 
 }
 
-.btn {
-  outline: none;
-  padding: 0 36px;
-  margin: 0;
-  height: 65px;
-  border-radius: 65px;
-  box-sizing: border-box;
-  font-size: 24px;
-  .bold;
-  text-transform: uppercase;
 
-  &.accent {
-    border: 2px solid @color-accent;
-    background: @color-accent;
-    color: @color-light;
-  }
-
-  &.light {
-    border: 2px solid @color-light;
-    background: transparent;
-    color: @color-light;
-  }
-
-  &.dark {
-    border: 2px solid @color-text;
-    background: @color-text;
-    color: @color-light;
-  }
-}
 
 button.lightweight {
   padding: 7px;

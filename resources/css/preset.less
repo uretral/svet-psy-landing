@@ -1,3 +1,5 @@
+@import "smart-grid";
+
 @color-text: #1C2B3F;
 @color-bg: #F8F6F4;
 @color-light: #FFF;
@@ -5,8 +7,11 @@
 @color-substrate: #ECEBEB;
 @color-border: #828A95;
 @color-dark: #384556;
+@color-border-light: #EAE7E5;
 
+.heading {
 
+}
 
 
 .regular {
@@ -27,6 +32,12 @@
   font-style: normal;
 }
 
+.extra-light {
+  font-family: 'Montserrat ExtraLight', sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
 a {
   text-decoration: none;
 
@@ -35,5 +46,126 @@ a {
   }
 }
 
+.hidden {
+  display: none;
+}
 
 
+.btn, a.btn {
+  outline: none;
+  padding: 0 36px;
+  margin: 0;
+  height: 65px;
+  border-radius: 65px;
+  box-sizing: border-box;
+  font-size: 24px;
+  .bold;
+  text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  .md-block({
+    height: 55px;
+    font-size: 20px;
+  });
+  .sm-block({
+    height: 46px;
+    font-size: 14px;
+  });
+  .xs-block({
+    height: 32px;
+    font-size: 12px;
+  });
+
+  &.accent {
+    border: 2px solid @color-accent;
+    background: @color-accent;
+    color: @color-light;
+  }
+
+  &.light {
+    border: 2px solid @color-light;
+    background: transparent;
+    color: @color-light;
+  }
+
+  &.dark {
+    border: 2px solid @color-text;
+    background: @color-text;
+    color: @color-light;
+  }
+
+  &.plus {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    font-weight: normal;
+    border: none;
+    background: unset;
+    margin: 10px auto 0;
+    .extra-light;
+
+    &:hover {
+      .regular;
+    }
+
+  }
+
+  &.simple {
+    text-transform: uppercase;
+  }
+
+
+}
+
+
+.p-md {
+  font-size: 18px;
+}
+
+.p-sm {
+  font-size: 16px;
+}
+
+.p-xs {
+  font-size: 14px;
+}
+
+.pm {
+  .md-block({
+    .p-md;
+  });
+  .sm-block({
+    .p-sm;
+  });
+  .xs-block({
+    .p-xs;
+  });
+}
+
+.h2-md {
+
+  font-size: 30px;
+}
+
+.h2-sm {
+  font-size: 24px;
+}
+
+.h2-xs {
+  font-size: 20px;
+}
+
+.h2m {
+  .md-block({
+    .h2-md;
+  });
+  .sm-block({
+    .h2-sm;
+  });
+  .xs-block({
+    .h2-xs;
+  });
+}

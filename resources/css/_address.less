@@ -2,11 +2,20 @@
 
 .address {
   //background: url("../img/greek.svg") repeat-x center bottom;
-  margin-top: 124px;
+  padding-top: 124px;
+  padding-bottom: 120px;
+  .md-block({
+    padding-top: 70px;
+    padding-bottom: 70px;
+  });
+  .sm-block({
+    padding-bottom: 40px;
+  });
 
   &_body {
     .col();
     .size(4);
+    .size-xs(12);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,6 +24,17 @@
       .bold;
       font-size: 40px;
       text-transform: uppercase;
+
+      .md-block({
+          font-size: 28px!important;
+        margin-bottom: 10px;
+      });
+      .sm-block({
+        font-size: 20px!important;
+      });
+      .xs-block({
+        text-align: center;
+      });
     }
     address {
       b {
@@ -27,6 +47,11 @@
         font-size: 20px;
         line-height: 110%;
         padding-bottom: 35px;
+        .pm;
+        .xs-block({
+          padding-bottom: 8px;
+          text-align: center;
+        });
       }
     }
 
@@ -34,6 +59,9 @@
       display: block;
       line-height: 125%;
       padding-bottom: 20px;
+      .xs-block({
+        text-align: center;
+      });
 
     }
 
@@ -42,6 +70,7 @@
   &_slider {
     .col();
     .size(8);
+    .size-xs(12);
     display: flex;
     flex-direction: column;
   }

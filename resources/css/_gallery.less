@@ -2,23 +2,37 @@
 
 .gallery {
   padding-top: 103px;
+  .sm-block({
+    padding-top: 60px;
+  });
 
 &_header {
   .col();
   .size(12);
   background: url("../img/logo.png") no-repeat right center;
   background-size: auto 78px;
+  .xs-block({
+    background-size: auto 50px;
+  });
   h2 {
     .bold;
     font-size: 40px;
     text-transform: uppercase;
     word-spacing: 999em;
+    .h2m;
   }
 }
 &_slider {
   .col();
   .size(12);
   margin-top: 117px;
+  .sm-block({
+    margin-top: 70px;
+  });
+
+  .xs-block({
+    margin-top: 50px;
+  });
 
   &_box {
     .row-flex;

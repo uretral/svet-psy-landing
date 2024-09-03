@@ -3,13 +3,23 @@
 .feedback {
   //background: url("../img/greek.svg") repeat-x center bottom;
   margin-top: 112px;
+  .sm-block({
+    background-color: @color-light;
+  });
+  .md-block({
+    margin-top: 0;
+  });
   &_row {
     .row-flex;
+    position: relative;
   }
 
   &_col {
     .col();
     .size(1);
+    .sm-block({
+      display: none;
+    });
   }
 
   &_box {
@@ -20,16 +30,17 @@
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: @color-light;
+    .xs-block({
+      padding-top: 100px;
 
-    p {
-      font-size: 28px;
-      line-height: 40px;
-    }
+    });
   }
 
   &_body {
     .col();
     .size(5);
+    .size-sm(7);
+    //.size-xs(8);
     display: flex;
     flex-direction: column;
   }
@@ -43,6 +54,16 @@
         color: @color-accent;
         display: block;
       }
+      .h2m;
+      .md-block({
+        margin-bottom: 30px;
+      });
+      .xs-block({
+        width: 100%;
+        position: absolute;
+        top: -69px;
+        left: 0px;
+      });
     }
   }
 
@@ -50,13 +71,16 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: auto;
-    padding-bottom: 40px;
   }
 
   &_links {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    .xs-block({
+      gap: 8px;
+    });
   }
 
   &_link {
@@ -65,6 +89,13 @@
     border-radius: 50%;
     cursor: pointer;
     position: relative;
+    img {
+      object-fit: cover;
+      //width: 73px;
+      //height: 73px;
+      border-radius: 50%;
+    }
+
     &.active {
       &:after {
         content: '';
@@ -84,19 +115,32 @@
   &_person {
     .bold;
     margin-top: 44px;
+    min-height: 80px;
     b {
       display: block;
+      padding-bottom: 10px;
       text-transform: uppercase;
+    }
+    p {
+      font-size: 14px;
+      font-weight: normal;
+
     }
   }
 
   &_video {
     .col();
     .size(4);
+    .size-sm(5);
+    //.size-xs(4);
     height: 480px;
     position: relative;
     border-radius: 50px;
-    background: url("../img/v.png") no-repeat center;
+    overflow: hidden;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
     .play {
       width: 73px;
       height: 73px;
@@ -111,6 +155,10 @@
       top: calc(50% - 36px);
       left: calc(50% - 36px);
     }
+    
+    .xs-block({
+      height: 300px;
+    });
   }
 
   &_footer {

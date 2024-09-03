@@ -1,9 +1,24 @@
 @import "smart-grid";
 
 .keyTopics {
-  background: url("../img/greek.svg") repeat-x center bottom;
   padding-top: 108px;
-  padding-bottom: 167px;
+  margin-bottom: -84px;
+  .md-block({
+    padding-top: 70px;
+    padding-bottom: 100px;
+    margin-bottom: -120px;
+  });
+
+  .sm-block({
+    padding-top: 70px;
+    padding-bottom: 100px;
+  });
+
+  .xs-block({
+    padding-top: 70px;
+    padding-bottom: 30px;
+    background-size: auto 150px;
+  });
   &_header {
     .col();
     .size(12);
@@ -12,6 +27,7 @@
       font-size: 40px;
       text-transform: uppercase;
       line-height: 110%;
+      .h2m;
       span {
         display: block;
         color: @color-accent;
@@ -23,34 +39,50 @@
     display: flex;
     justify-content: space-between;
     margin-top: 49px;
+    .xs-block({
+      flex-wrap: wrap;
+      justify-content: unset;
+    });
 
     &_content {
       .col();
       .size(6);
+      .size-xs(12);
+
       display: flex;
       flex-direction: column;
       justify-content: space-between;
 
       ul {
-
+        //.size-xs(12);
         li {
+          h3 {
+            .bold;
+            text-transform: uppercase;
+            display: block;
+          }
           display: block;
-          padding-left: 30px;
           position: relative;
           font-size: 20px;
           line-height: 150%;
           margin-bottom: 29px;
-          &:before {
-            content: '\2022';
-            position: absolute;
-            left: 12px;
-          }
+          .pm;
+          .xs-block({
+            //width: 100%;
+          });
         }
       }
       .btn {
         white-space: nowrap;
         align-self: flex-start;
         margin-top: 16px;
+        .sm-block({
+          width: 100%;
+        });
+        .xs-block({
+          width: auto;
+          margin: 0 auto 40px;
+        });
       }
     }
   }

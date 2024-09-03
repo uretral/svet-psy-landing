@@ -6,13 +6,12 @@
         <div class="gallery_slider_box">
             @for ($item = 1; $item <= 3; $item ++)
                 <div class="gallery_slider_slide">
-                    <img class="gallery_slider_preview" src="{{Vite::image('gallery/'.$item.'.png')}}" alt="support image"/>
+                    <img class="gallery_slider_preview" src="{{asset('img/gallery/'.$item.'.png')}}" alt="support image"/>
                 </div>
             @endfor
         </div>
         <div class="gallery_slider_btn">
-            <button class="gallery_slider_left"></button>
-            <button class="gallery_slider_right"></button>
+            <a class="btn accent" target="_blank" href="https://disk.yandex.ru/d/kQi4F634kRUGiw">Открыть все</a>
         </div>
     </div>
 

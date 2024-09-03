@@ -7,8 +7,11 @@
     @include('frames.purpose')
     @include('frames.tasks')
     @include('frames.timer')
+
     @include('frames.directions')
     @include('frames.forum')
+    @include('frames.sponsorship')
+
     @include('frames.keyTopics')
     @include('frames.brics')
     @include('frames.invited')
@@ -20,9 +23,10 @@
     @include('frames.support')
     @include('frames.gallery')
     @include('frames.quote_1')
-    @include('frames.competition')
-    @include('frames.sponsorship')
+{{--    @include('frames.competition')--}}
     @include('frames.thanks')
-
+    @include('frames.sponsor')
+    @include('frames.modal')
 
 @endsection
+

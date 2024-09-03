@@ -13,6 +13,12 @@ footer {
     margin-bottom: 11px;
     white-space: nowrap;
     color: @color-light;
+    .md-block({
+      font-size: 15px;
+    });
+    .sm-block({
+      text-align: center;
+    });
     &:hover {
       text-decoration: underline;
     }
@@ -20,6 +26,7 @@ footer {
 
   &-menu {
     .col();
+    .size-sm(12);
 
     display: flex;
     flex-direction: column;
@@ -27,6 +34,10 @@ footer {
       font-size: 36px;
       margin-bottom: 35px;
       color: @color-light;
+      .h2m;
+      .sm-block({
+        text-align: center;
+      });
     }
 
   }
@@ -36,18 +47,28 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    .size-sm(12);
+    .sm-block({
+      margin: 20px 0;
+    });
     .tel {
       font-size: 36px;
       line-height: 160%;
+      .md-block({
+        font-size: 30px;
+      });
     }
     .mailto {
       font-size: 20px;
+      .md-block({
+        font-size: 18px;
+      });
     }
   }
 
   &-policy {
     .col();
-
+    .size-sm(12);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -63,6 +84,9 @@ footer {
     gap: 38px;
     padding-top: 10px;
     margin-bottom: auto;
+    .sm-block({
+      justify-content: center;
+    });
     .tg-tr {
       width: 29px;
       height: 29px;
@@ -79,6 +103,13 @@ footer {
       width: 32px;
       height: 20px;
       background: url("../img/vk.svg") no-repeat center;
+      background-size: contain;
+    }
+
+    .rutube {
+      width: 32px;
+      height: 28px;
+      background: url("../img/retube.svg") no-repeat center;
       background-size: contain;
     }
   }

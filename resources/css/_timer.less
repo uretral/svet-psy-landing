@@ -5,6 +5,10 @@
   color: @color-light;
   padding-top: 100px;
   padding-bottom: 111px;
+  .sm-block({
+    padding-top: 50px;
+    padding-bottom: 50px;
+  });
 
   &_wrapper {
     justify-content: center;
@@ -14,10 +18,12 @@
   &_body {
     .col();
     .size(10);
+    .size-sm(12);
     p {
       font-size: 40px;
-      line-height: 52px;
+      line-height: 130%;
       text-align: center;
+      .h2m;
     }
     b {
       .bold;
@@ -27,9 +33,13 @@
   &_digits {
     .col();
     .size(8);
+    .size-sm(12);
     display: flex;
     justify-content: space-between;
     margin-top: 76px;
+    .sm-block({
+      margin-top: 40px;
+    });
   }
 
   &_digit {
@@ -46,12 +56,30 @@
       font-size: 55px;
       display: block;
       line-height: 100%;
+
       &:after {
         content: attr(data-title);
         font-size: 24px;
         display: block;
         margin-top: 20px;
       }
+
+      .sm-block({
+        font-size: 40px;
+
+        &:after {
+          font-size: 20px;
+          margin-top: 0px;
+        }
+      });
+
+      .xs-block({
+        font-size: 36px;
+
+        &:after {
+          font-size: 16px;
+        }
+      });
     }
     em {
 

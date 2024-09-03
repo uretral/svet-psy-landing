@@ -1,8 +1,9 @@
 @import "smart-grid";
 
 .tasks {
-  background: url("../img/greek.svg") repeat-x center bottom;
-  padding-bottom: 200px;
+  .md-block({
+    background-size: auto 140px ;
+  });
 
   &_list, &_body {
     .col();
@@ -11,38 +12,88 @@
 
   &_body {
     padding-top: 113px;
+    
+    .md-block({
+      padding-top: 60px;
+    });
 
     h2 {
       .bold;
       font-size: 40px;
       text-transform: uppercase;
-
+      .h2m;
       span {
         display: block;
         color: @color-accent;
       }
+      .xs-block({
+        text-align: center;
+      });
     }
 
     p {
       font-size: 28px;
       line-height: 40px;
+      .pm;
     }
+
+
   }
 
   &_list {
-    display: flex;
-    justify-content: space-between;
-    gap: 3%;
+    .col();
+    .size(12);
+
+    //display: flex;
+    //justify-content: space-between;
+    //gap: 3%;
     margin-top: 68px;
     margin-bottom: 48px;
     line-height: 25px;
+    .md-block({
+      margin-top: 50px;
+      margin-bottom: 0px;
+    });
+    .sm-block({
+      margin-top: 30px;
+    });
+  }
+
+  &_items {
+    .row-flex;
+  }
+
+  &_item {
+    .col();
+    .size(3);
+    .size-md(6);
+    .size-xs(12);
 
     h3 {
       color: @color-accent;
       .bold;
+      margin-bottom: 20px;
+      height: 80px;
+
     }
 
+    .md-block({
+      margin-bottom: 20px;
+      h3 {
+        margin-bottom: 10px;
+        height: 50px;
+      }
 
+    });
+
+    .xs-block({
+      margin-bottom: 20px;
+      h3 {
+        margin-bottom: 10px;
+        height: unset;
+
+      }
+    });
   }
 
 

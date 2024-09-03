@@ -4,23 +4,33 @@
   padding-top: 100px;
   padding-bottom: 100px;
 
+  .xs-block({
+    padding-top: 50px;
+    padding-bottom: 100px;
+  });
+
   &_title {
     .col();
     .size(12);
     margin-bottom: 27px;
     background: url("../img/logo.png") no-repeat right center;
     background-size: auto 78px;
+    .xs-block({
+      background-size: auto 50px;
+    });
 
     h2 {
       .bold;
       font-size: 40px;
       text-transform: uppercase;
+      .h2m;
     }
   }
 
   &_item {
     .col();
     .size(7);
+    .size-sm(12);
     height: 450px;
     display: flex;
     border: 1px solid @color-text;
@@ -28,28 +38,56 @@
     padding: 46px;
     align-items: flex-end;
     background: url("../img/video-btn.svg") no-repeat center 57px;
+    //.sm-block({
+    //  height: 300px;
+    //});
+    .xs-block({
+      padding: 26px;
+    });
     &:last-of-type {
-      .col();
       .size(5);
+      .size-sm(12);
       color: @color-light;
       background-color: @color-dark;
+      .sm-block({
+        margin-top: 50px;
+      });
+      .xs-block({
+        height: 350px;
+      });
     }
 
     &_text {
       text-align: center;
       width: 100%;
       b {
-        display: block;
+        &.block {
+          display: block;
+        }
       }
       p {
         font-size: 24px;
         line-height: 120%;
+        .pm;
+        .sm-block({
+          font-size: 20px;
+        });
       }
     }
 
-    button {
+    a {
       margin-top: 34px;
       width: 353px;
+      .md-block({
+        width: auto;
+      });
+      .xs-block({
+        width: 100%;
+        height: 50px;
+      });
+      &:hover {
+        color: @color-text;
+      }
     }
 
     ul {
@@ -59,10 +97,21 @@
         position: relative;
         font-size: 20px;
         line-height: 110%;
+        .pm;
         &:before {
           content: '\2022';
           padding-right: 20px;
         }
+        .md-block({
+          padding-left: 0;
+          &:before {
+            display: none;
+          }
+        });
+
+        .sm-block({
+          font-size: 20px;
+        });
       }
     }
   }

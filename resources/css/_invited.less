@@ -3,22 +3,33 @@
 .invited {
   padding-top: 86px;
   padding-bottom: 68px;
+  .sm-block({
+    padding-top: 50px;
+    padding-bottom: 50px;
+  });
 
   &_header {
     .col();
     .size(7);
     margin-bottom: 67px;
+    .sm-block({
+      .col();
+      .size(12);
+      margin-bottom: 30px;
+    });
 
     h2 {
       .bold;
       font-size: 40px;
       text-transform: uppercase;
+      .h2m;
     }
   }
 
   &_content {
     .col();
     .size(6);
+    .size-xs(12);
 
     ul {
       li {
@@ -27,6 +38,12 @@
         margin-bottom: 20px;
         padding-right: 100px;
         line-height: 143%;
+        .md-block({
+          padding-right: 20px;
+        });
+        .sm-block({
+          padding-right: 2px;
+        });
       }
     }
   }

@@ -1,15 +1,16 @@
-<x-section class="sponsorship" row="competition_wrapper">
+<x-section class="sponsorship" row="sponsorship_wrapper">
     <div class="sponsorship_body">
-        <span>
-            На конгрессе предполагается дать старт международному конкурсу/премии
-        </span>
-        <h2>«СПЕЦИАЛИСТ ПО ТРАВМАТИЧЕСКОМУ СТРЕССУ И ПСИХОТРАВМЕ»</h2>
+        <h2>
+            Вручение международной премии
+            <b>Жизнь после травмЫ</b>
+            лучшим практикам
+            и специалистам
+        </h2>
         <p>
-            в междисциплинарном формате, организуемого при непосредственном участии АНО «Евразийский консорциум по
-            травматическому стрессу и психотравме».
+            *при содействии «Евразийский консорциум по травматическому стрессу и психотравме»
         </p>
     </div>
     <div class="sponsorship_footer">
-        <button class="btn accent">СТАТЬ СПОНСОРОМ ПРЕМИИ</button>
+        <a href="https://brendid.getcourse.ru/sponsor_premiya" target="_blank" class="btn accent">Стать спонсором премии</a>
     </div>
 </x-section>

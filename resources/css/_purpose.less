@@ -1,27 +1,59 @@
 @import "smart-grid";
-
 .purpose {
   color: @color-light;
   background: url("../img/greek-2.svg") no-repeat right 0 @color-accent;
+  .sm-block({
+    background: url("../img/greek-2.svg") repeat-y right 0 @color-accent;
+    background-size: 50% auto;
+  });
   &_aside, &_body {
-    .col();
-    .size(6);
-    .col();
-    .size(6);
-    padding-top: 163px;
+    padding-top: 150px;
     padding-bottom: 198px;
-  }
-  &_body {
+    .md-block({
+      padding-top: 70px;
+      padding-bottom: 70px;
+    });
 
+    .sm-block({
+      padding-top: 50px;
+      padding-bottom: 50px;
+    });
+  }
+
+  &_body {
+    .col();
+    .size(6);
+    .size-md(7);
+    .size-sm(12);
     h2 {
       .bold;
       font-size: 40px;
       word-spacing: 999em;
       margin-bottom: 41px;
+      text-transform: uppercase;
+      .md-block({
+        word-spacing: unset;
+      });
+      .h2m;
+      .sm-block({
+        margin-bottom: 20px;
+      });
     }
     p {
       font-size: 28px;
-      line-height: 40px;
+      line-height: 160%;
+      .pm;
     }
+  }
+  &_aside {
+    .col();
+    .size(6);
+    .size-md(5);
+    .size-sm(0);
+    display: flex;
+    align-items: center;
+    .sm-block({
+      display: none;
+    });
   }
 }

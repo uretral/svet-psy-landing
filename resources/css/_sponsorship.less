@@ -1,29 +1,67 @@
 @import "smart-grid";
 
 .sponsorship {
-  padding-top: 150px;
+  padding-top: 190px;
   padding-bottom: 140px;
-  background: @color-light;
+  background: url("../img/sponsorship.png") no-repeat center;
+  background-size: auto 100%;
+  .md-block({
+    padding-top: 70px;
+    padding-bottom: 70px;
+  });
+  &_wrapper {
+    background: url("../img/avard.png") no-repeat calc(100% - 30px) bottom;
+    background-size: auto 83%;
+    .md-block({});
+    .sm-block({
+      background: url("../img/avard.png") no-repeat calc(100% - 30px) bottom;
+      background-size: auto 70%;
+    });
+    .xs-block({
+      background: url("../img/avard.png") no-repeat center bottom;
+      background-size: auto 50%;
+    });
+  }
+
 
   &_body {
     .col();
-    .size(10);
-    margin: 0 auto;
-    text-align: center;
+    .size(7);
+    .size-xs(12);
+
 
     h2 {
-      .bold;
+
       font-size: 40px;
       line-height: 125%;
       text-transform: uppercase;
-      color: @color-accent;
+      color: @color-light;
       margin-top: 34px;
       margin-bottom: 38px;
+      word-wrap: unset;
+      .md-block({
+        font-size: 40px;
+      });
+      .sm-block({
+        font-size: 28px;
+      });
+      .xs-block({
+        font-size: 30px;
+        text-align: center;
+        color: #edf2fa;
+      });
+
+
     }
 
     p {
-      font-size: 28px;
+      font-size: 20px;
       line-height: 142%;
+      color: @color-light;
+      .xs-block({
+        font-size: 18px;
+        text-align: center;
+      });
     }
     
     span {
@@ -40,7 +78,13 @@
     .size(12);
     margin-top: 77px;
     display: flex;
-    justify-content: center;
+
+    .xs-block({
+      margin-top: 40px;
+      margin-bottom: 30px;
+      justify-content: center;
+    });
+
   }
 
   &_aside {

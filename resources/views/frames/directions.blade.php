@@ -33,7 +33,9 @@
             сфере лечения/ сопровождения/ реабилитации болеющих онкозаболеваниями пациентов</p>
     </div>
     <div class="directions_item">
-        <button class="btn">ПОДРОБНАЯ ПРОГРАММА</button>
+        <a class="btn"
+           href="https://docs.google.com/spreadsheets/d/14J3gPPbkm6EKFcUrd8F3q6DjGFhHTCwjBpr27ac-Kok/">ПОДРОБНАЯ
+            ПРОГРАММА</a>
     </div>
 
 </x-section>

@@ -4,6 +4,15 @@
   padding-top: 128px;
   padding-bottom: 68px;
   background-color: @color-light;
+  .md-block({
+    padding-top: 80px;
+    padding-bottom: 68px;
+  });
+
+  .sm-block({
+    padding-top: 60px;
+    padding-bottom: 20px;
+  });
 
   &_header {
     .col();
@@ -11,15 +20,18 @@
     margin-bottom: 52px;
 
     h2 {
-      .bolder;
+      .bold;
       font-size: 40px;
       text-transform: uppercase;
+      .h2m;
     }
   }
 
   &_item {
     .col();
     .size(4);
+    .size-md(6);
+    .size-xs(12);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -28,6 +40,10 @@
     border-radius: 30px;
     overflow: hidden;
     background-color: @color-bg;
+
+    .md-block({
+      margin-bottom: 50px;
+    });
 
     &_title {
       height: 100%;
@@ -124,6 +140,9 @@
     ul {
       height: 170px;
       padding: 25px 37px 0 37px;
+      .xs-block({
+        height: unset;
+      });
 
       li {
         display: block;
@@ -139,6 +158,12 @@
           top: 0;
           left: 0;
         }
+        .sm-block({
+          padding-left: unset;
+          &:before {
+            display: none;
+          }
+        });
       }
     }
 
@@ -147,13 +172,6 @@
       position: relative;
       //width: 100%;
       margin: 0 37px 25px 37px;
-
-      button {
-        position: absolute;
-        top: -7px;
-        right: 0;
-        color: @color-border;
-      }
 
       input[type="text"] {
         width: 100%;
@@ -208,16 +226,35 @@
       padding: 32px;
       background-color: @color-text;
 
-      button {
+      a {
         font-size: 20px;
         .bold;
         color: @color-light;
         background: transparent;
+        text-decoration: none;
+        text-transform: uppercase;
 
         &:hover {
           color: @color-accent;
         }
       }
+    }
+
+    .btn.plus {
+      .md-block({
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        margin-bottom: 30px;
+      });
+      .sm-block({
+        display: block;
+        margin-top: 70px;
+      });
+      
+      .xs-block({
+        margin-top: 20px;
+      });
     }
 
     &_footer {

@@ -1,10 +1,15 @@
 @import "smart-grid";
 
 .support {
-  margin-top: 173px;
+  //margin-top: 173px;
   padding-top: 90px;
   padding-bottom: 70px;
   background: @color-light;
+
+  .md-block({
+    padding-top: 70px;
+    padding-bottom: 70px;
+  });
 
   &_header {
     .col();
@@ -15,6 +20,7 @@
       font-size: 40px;
       text-transform: uppercase;
       line-height: 120%;
+      .h2m;
 
       span {
         display: block;
@@ -23,6 +29,23 @@
     }
   }
 
+  &_top {
+    .col();
+    .size(12);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+    margin-top: 85px;
+    margin-bottom: 20px;
+    .md-block({
+      gap: 10px;
+    });
+    .xs-block({
+      margin-bottom: 0;
+    });
+  }
   &_body {
     .col();
     .size(12);
@@ -30,56 +53,75 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-top: 85px;
+    gap: 10px;
+    .xs-block({
+      margin-top: 0;
+    });
 
     img {
       flex-shrink: 0;
       align-self: center;
-
     }
-
 
   }
 
   &_logos {
+    &_1-1 {width: 121px;}
+    &_1-2 {width: 120px;}
+    &_1-3 {width: 240px;}
     &_1 {
-      width: 240px;
+      width: 180px;
+      .xs-block({
+        width: 160px
+      });
     }
 
     &_2 {
-      width: 227px;
-    }
-
-    &_3 {
       width: 180px;
     }
 
+    &_3 {
+      width: 128px;
+    }
+
     &_4 {
-      width: 159px;
+      width: 123px;
     }
 
     &_5 {
-      width: 189px;
+      width: 145px;
     }
 
     &_6 {
-      width: 215px;
+      width: 142px;
     }
 
     &_7 {
-      width: 234px;
+      width: 118px;
     }
 
     &_8 {
-      width: 156px;
+      width: 128px;
     }
 
     &_9 {
-      width: 218px;
+      width: 167px;
     }
 
     &_10 {
-      width: 205px;
+      width: 111px;
+    }
+    &_11 {
+      width: 155px;
+    }
+    &_12 {
+      width: 146px;
+    }
+    &_13 {
+      width: 62px;
+    }
+    &_14 {
+      width: 107px;
     }
   }
 

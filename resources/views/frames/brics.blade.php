@@ -7,6 +7,6 @@
         </p>
     </div>
     <div class="brics_aside">
-        <img src="{{Vite::image('brics.png')}}" alt="brics"/>
+        <img src="{{asset('img/brics.png')}}" alt="brics"/>
     </div>
 </x-section>

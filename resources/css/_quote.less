@@ -2,21 +2,43 @@
 
 .quote {
   color: @color-light;
-  background: url("../img/greek-2.svg") no-repeat right 0 @color-accent;
+  background: url("../img/line-vertical.svg") no-repeat right 0 @color-accent;
+  .sm-block({
+    background-size: contain;
+  });
   margin-top: 115px;
+  .md-block({
+    margin-top: 0;
+  });
+  .xs-block({
+    margin-top: 0;
+  });
   &_body {
     .col();
     .size(7);
+    .size-md(12);
+
     padding-top: 100px;
     padding-bottom: 118px;
+    .md-block({
+      padding-top: 70px;
+      padding-bottom: 70px;
+    });
+    .xs-block({
+      padding-top: 40px;
+      padding-bottom: 40px;
+    });
     &.thin {
       .size(6);
+      .size-md(12);
+
     }
   }
   &_body {
     p {
       font-size: 28px;
-      line-height: 40px;
+      line-height: 140%;
+      .pm;
     }
   }
 

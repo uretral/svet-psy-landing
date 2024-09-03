@@ -4,26 +4,72 @@
   background: @color-light;
   padding-top: 117px;
 
+  .md-block({
+    padding-top: 70px;
+    padding-bottom: 50px;
+  });
+  .xs-block({
+    padding-top: 40px;
+    padding-bottom: 30px;
+  });
+
   &_header {
     .col();
     .size(12);
     font-size: 28px;
-    line-height: 52px;
+    line-height: 180%;
     margin-bottom: 78px;
+    .md-block({
+      margin-bottom: 50px;
+    });
+    .sm-block({
+      margin-bottom: 30px;
+    });
+    .xs-block({
+      line-height: unset;
+      margin-bottom: 20px;
+
+    });
+
+    &.second {
+      margin-top: 50px;
+    }
   }
 
   &_title {
     display: flex;
     justify-content: space-between;
     .bold;
+
     b {
       color: @color-accent;
+      font-size: 30px;
+      .xs-block({
+        font-size: 22px;
+      });
     }
+    h4 {
+      text-transform: uppercase;
+      .bold;
+      font-size: 30px;
+      .xs-block({
+        font-size: 22px;
+      });
+    }
+    .xs-block({
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    });
   }
 
   &_duration {
     display: flex;
     justify-content: space-between;
+    span {
+      .h2m;
+    }
+
   }
 
   &_body {
@@ -37,14 +83,31 @@
       line-height: 150%;
       margin-top: -47px;
       margin-bottom: 20px;
+      .sm-block({
+        font-size: 20px;
+        margin-top: unset;
+        text-align: center;
+      });
+      .xs-block({
+        font-size: 16px;
+        margin-top: unset;
+        text-align: center;
+      });
     }
 
     p {
       font-size: 20px;
       line-height: 150%;
+      .pm;
 
       &.thin {
         width: 70%;
+        .md-block({
+          width: auto;
+        });
+        .xs-block({
+          text-align: center;
+        });
       }
     }
   }
@@ -53,20 +116,39 @@
     display: flex;
     justify-content: space-between;
     margin-top: 57px;
+    flex-wrap: wrap;
+    .xs-block({
+      margin-top: 30px;
+    });
   }
+
+
+
+
 
   &_person {
     .col();
     .size(3);
+    .size-md(4);
+    .size-sm(6);
+    .size-xs(12);
     position: relative;
+    margin-bottom: 50px;
+
 
     span {
       display: block;
       margin-top: 53px;
       .bold;
-      font-size: 20PX;
+      font-size: 20px;
       word-spacing: 999em;
       text-align: center;
+      .md-block({
+        font-size: 18px;
+      });
+      .xs-block({
+        word-spacing: unset;
+      });
     }
 
     &_photo {
@@ -76,6 +158,9 @@
       margin: 0 auto;
       position: relative;
       z-index: 2;
+      background: @color-light;
+      overflow: hidden;
+
     }
 
     &:after {
@@ -86,29 +171,104 @@
       position: absolute;
       top: 0;
       left: 0;
+
+      .md-block({
+        //height: 242px;
+      });
+
     }
 
-    &:nth-of-type(1) {
+    &.accented {
       &:after {
         background: url("../img/forum-person-bg-1.svg") no-repeat center 42px;
+/*        .md-block({
+          background: url("../img/forum-person-bg-1.svg") no-repeat center bottom;
+          background-size: 100% auto;
+        });*/
+
+        .md-block({
+          background: url("../img/forum-person-bg-1.svg") no-repeat center bottom;
+          background-size:  contain ;
+        });
+
+        .sm-block({
+          background: url("../img/forum-person-bg-1.svg") no-repeat center bottom;
+          background-size:  contain ;
+        });
+        .xs-block({
+          background: url("../img/forum-person-bg-1.svg") no-repeat center bottom;
+          background-size: auto 100% ;
+        });
+
+
       }
     }
 
-    &:nth-of-type(2) {
+    &.lighted {
       &:after {
         background: url("../img/forum-person-bg-2.svg") no-repeat right 42px;
+/*        .md-block({
+          background: url("../img/forum-person-bg-2.svg") no-repeat right bottom;
+          background-size: 100% auto;
+        });*/
+
+        .md-block({
+          background: url("../img/forum-person-bg-2.svg") no-repeat calc(100% - 30%) bottom;
+          background-size:  contain ;
+        });
+        .sm-block({
+          background: url("../img/forum-person-bg-2.svg") no-repeat calc(100% - 30%) bottom;
+          background-size:  contain ;
+        });
+        .xs-block({
+          background: url("../img/forum-person-bg-2.svg") no-repeat calc(100% - 40%) bottom;
+          background-size: auto 100% ;
+        });
       }
+
     }
 
-    &:nth-of-type(3) {
+    &.grayscale {
       &:after {
         background: url("../img/forum-person-bg-3.svg") no-repeat calc(100% - 10%) 27px;
+/*        .md-block({
+          background: url("../img/forum-person-bg-3.svg") no-repeat calc(100% - 10%) 9px;
+          background-size: 100% auto;
+        });*/
+
+        .md-block({
+          background: url("../img/forum-person-bg-3.svg") no-repeat center bottom;
+          background-size:  contain ;
+        });
+
+        .sm-block({
+          background: url("../img/forum-person-bg-3.svg") no-repeat center bottom;
+          background-size:  contain ;
+        });
+
+        .xs-block({
+          background: url("../img/forum-person-bg-3.svg") no-repeat center bottom;
+          background-size: auto 100% ;
+        });
       }
     }
-
-    &:nth-of-type(4) {
+    &.darker {
       &:after {
-        background: url("../img/forum-person-bg-4.svg") no-repeat calc(100% - 16%) 47px;
+        background: url("../img/forum-person-bg-4.svg") no-repeat calc(100% - 16%) bottom;
+        .md-block({
+          background: url("../img/forum-person-bg-4.svg") no-repeat center bottom;
+          background-size:  contain ;
+        });
+
+        .sm-block({
+          background: url("../img/forum-person-bg-4.svg") no-repeat center bottom;
+          background-size:  contain ;
+        });
+
+        .xs-block({
+          background: url("../img/forum-person-bg-4.svg") no-repeat center bottom;
+          background-size: auto 90%;
+        });
       }
     }
   }
@@ -116,9 +276,15 @@
   &_arrow {
     .col();
     .size(12);
-    margin-top: 63px;
+    margin-top: 13px;
     box-sizing: border-box;
     margin-bottom: 55px;
+    .xs-block({
+      margin-bottom: 24px;
+    });
+    &.reverted {
+      transform: rotate(180deg);
+    }
 
     a {
       display: block;
@@ -139,5 +305,10 @@
     justify-content: center;
     margin-top: 24px;
     margin-bottom: 38px;
+    .xs-block({
+      .btn {
+        height: 50px;
+      }
+    });
   }
 }

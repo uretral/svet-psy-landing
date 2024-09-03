@@ -5,28 +5,54 @@
   padding-top: 110px;
   padding-bottom: 110px;
 
+  .md-block({
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: url("../img/greek-3.svg") no-repeat right top @color-accent;
+    background-size: auto 100% ;
+  });
+
+  .xs-block({
+    padding-top: 40px;
+    padding-bottom: 40px;
+  });
+
   &_body {
     .col();
     .size(7);
+    .size-md(8);
+    .size-xs(12);
+    .md-block({
+      display: flex;
+    });
 
     p {
       font-size: 28px;
       line-height: 145%;
       color: @color-light;
       padding-right: 40px;
+      .pm;
+      .md-block({
+        align-self: center;
+      });
+      .sm-block({
+        padding-right: unset;
+      });
     }
   }
 
   &_aside {
     .col();
     .size(5);
+    .size-md(4);
     display: flex;
     justify-content: end;
+    .xs-block({
+      display: none;
+    });
 
     img {
       align-self: center;
-      height: 100%;
-      width: auto;
     }
   }
 }

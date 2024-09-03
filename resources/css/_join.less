@@ -1,24 +1,53 @@
 @import "smart-grid";
 
 .join {
-  padding-bottom: 202px;
-  background: url("../img/greek.svg") repeat-x bottom;
+  padding-top: 70px;
+  .md-block({
+    padding-bottom: 50px;
+    padding-top: 30px;
+    background-size:  auto 140px;
+  });
+  .xs-block({
+    padding-bottom: 10px;
+    padding-top: 10px;
+  });
   &_wrapper {
-    padding-top: 70px;
+
     align-items: center;
 
   }
   &_text {
     .col();
     .size(6);
+    .size-md(12);
     font-size: 20px;
     line-height: 150%;
+    .md-block({
+      font-size: 18px;
+      text-align: center;
+    });
+    .xs-block({
+      font-size: 14px;
+    });
   }
   &_pic {
     .col();
     .size(6);
-    height: 280px;
-    background: @color-substrate;
+    .size-md(12);
+    //height: 280px;
+    .md-block({
+      margin: 30px auto;
+      text-align: center;
+    });
+    .xs-block({
+      margin: 30px auto 0;
+      iframe {
+        width: 100%;
+        min-height: 200px;
+
+
+      }
+    });
   }
   &_advantages {
     .col();
@@ -27,6 +56,15 @@
     margin-bottom: 46px;
     display: flex;
     justify-content: space-between;
+
+    .md-block({
+      flex-wrap: wrap;
+      margin-top: 40px;
+    });
+
+    .xs-block({
+
+    });
   }
 
   &_advantage {
@@ -41,6 +79,34 @@
       margin-bottom: 26px;
       color: @color-accent;
     }
+
+    .md-block({
+      width: 30%;
+      text-align: center;
+      margin-right: unset;
+      margin-bottom: 20px;
+      b {
+        font-size: 40px;
+        line-height: unset;
+      }
+    });
+
+    .sm-block({
+      b {
+        font-size: 30px;
+      }
+    });
+
+    .xs-block({
+      width: 50%;
+      text-align: center;
+      padding: 0 10px;
+
+      b {
+        font-size: 24px;
+        margin-bottom: 5px;
+      }
+    });
 
   }
 
